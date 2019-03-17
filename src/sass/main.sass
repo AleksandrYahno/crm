@@ -1,0 +1,320 @@
+@import "reset"
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700')
+$fontOpenSans: 'Open Sans', sans-serif
+$colorWhite: #FFFFFF
+$colorBlack: #0D0D0D
+$colorPink: #EF5295
+$colorTuna: #303841
+$colorOrange: #FDC040
+$colorDaisyBush: #442F9A
+html
+  overflow-y: scroll
+  overflow-x: auto
+
+body
+  width: 100vw
+  height: 100vh
+  font-family: $fontOpenSans
+  font-weight: bold
+  position: relative
+  display: flex
+  justify-content: space-between
+  overflow: hidden
+
+.side-bar
+  width: 100%
+  min-width: 22.5vw
+  height: 100%
+  background: $colorTuna
+
+.wrapper
+  width: 100%
+  min-width: 77.5vw
+  height: 100%
+  display: flex
+  flex-direction: column
+
+.top-bar
+  width: 100%
+  min-height: 54px
+  height: 54px
+  border-bottom: 3px solid #F8F8F8
+  display: flex
+  align-items: center
+  box-sizing: border-box
+  padding: 0 37px
+
+.breadcrums
+  width: 100%
+  .breadcrums__list
+    display: flex
+    align-items: center
+    width: max-content
+    .breadcrums__list--item
+      font-size: 16px
+      font-weight: bold
+      color: #4F4F4F
+      display: flex
+      align-items: center
+      position: relative
+      margin-right: 20px
+      &:after
+        content: ' '
+        display: flex
+        width: 7px
+        height: 7px
+        margin-left: 20px
+        transform: rotate(45deg)
+        border-top: 3px solid #4F4F4F
+        border-right: 3px solid #4F4F4F
+
+    .breadcrums__list--item:last-child
+      color: $colorDaisyBush
+      &:after
+        display: none
+
+.search
+  .search__form
+    p
+      display: flex
+      position: relative
+      align-items: center
+      input
+        width: 290px
+        height: 38px
+        display: flex
+        align-items: center
+        box-sizing: border-box
+        border: 2px solid #EDEDED
+        border-radius: 4px
+        padding-left: 20px
+        &::placeholder
+          color: #999999
+          font-size: 12px
+          text-transform: uppercase
+          font-weight: 500
+      i
+        position: absolute
+        right: 18px
+        color: #999999
+
+.notification
+  margin: 0 42px
+  .notification__link
+    display: flex
+    text-decoration: none
+    position: relative
+    .notification__link--icon
+      width: 18px
+      height: auto
+    .notification__link--count
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 16px
+      height: 16px
+      border-radius: 50%
+      background: $colorPink
+      color: $colorWhite
+      font-size: 12px
+      font-weight: bold
+      position: absolute
+      right: -8px
+      top: -8px
+
+.avatar
+  .avatar__link
+    display: flex
+    align-items: center
+    width: max-content
+    text-decoration: none
+    .avatar__link--img
+      width: 40px
+      min-width: 40px
+      height: 40px
+      border-radius: 50%
+      overflow: hidden
+
+    .avatar__link--nick
+
+      color: #4F4F4F
+      font-size: 16px
+      font-weight: bold
+      margin-left: 12px
+
+.main-container
+  width: 100%
+  min-height: 254px
+  display: flex
+
+.customer__img
+  display: flex
+  align-items: center
+  justify-content: center
+  padding-bottom: 36px
+  img
+    width: 100px
+    height: 100px
+    border-radius: 50%
+    overflow: hidden
+    margin: 0px 30px 0 27px
+
+.customer__data
+  display: flex
+  flex-direction: column
+  width: 100%
+  .customer__data--name
+    height: 50%
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    padding-left: 6px
+    .name
+      font-size: 20px
+      font-weight: bold
+      color:  #4F4F4F
+      letter-spacing: 1px
+    .prof
+      font-size: 14px
+      font-weight: bold
+      color: #999999
+      margin: 13px 0 18px 0
+    .status
+      font-size: 11px
+      text-transform: uppercase
+      color: $colorWhite
+      background: $colorOrange
+      padding: 1px 4px
+      margin-left: 14px
+      border-radius: 3px
+
+  .customer__data--body
+    height: 50%
+    border-top: 2px solid #F1F1F1
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    padding-left: 6px
+    .contact
+      display: flex
+      flex-direction: column
+      margin-top: 29px
+
+      .contact__met
+        color: #999999
+        font-size: 12px
+        font-weight: bold
+        text-transform: uppercase
+        letter-spacing: 1px
+      .contact__lint
+        font-size: 15px
+        color: $colorDaisyBush
+        text-decoration: none
+        font-weight: bold
+        margin-top: 10px
+
+    .quoate-btn
+      width: 200px
+      margin-top: 29px
+      margin-right: 40px
+      display: flex
+      justify-content: flex-end
+      .button
+        border: none
+        border-radius: 4px
+        color: $colorOrange
+        font-weight: bold
+        text-transform: uppercase
+        background: $colorTuna
+        display: flex
+        align-items: center
+        justify-content: center
+        //padding: 5px 6px
+        padding: 10px 20px
+        letter-spacing: 1px
+        font-size: 13px
+
+
+
+.base
+  width: 100%
+  height: 100%
+  border: 1px dotted purple
+
+
+#tabs
+  .tab
+    display: inline-block
+    padding: 5px 10px
+    cursor: pointer
+    position: relative
+    z-index: 5
+  .whiteborder
+    border: 1px solid #707070
+    border-bottom: 1px solid #fff
+    border-radius: 3px 3px 0  0
+  .tabContent
+    width: 300px
+    height: 60px
+    border: 1px solid #707070
+    position: relative
+    top: -1px
+    z-index: 1
+    padding: 10px
+    border-radius: 0 0 3px 3px
+  .hide
+    display: none
+  .show
+    display: block
+
+
+.logo
+  color: $colorOrange
+  font-size: 28px
+  font-weight: 400
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  width: 100%
+  height: 91px
+  padding-left: 7%
+.menu
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  margin-top: 20px
+  .menu__item
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 54px
+    border-left: 2px solid transparent
+    transition: all .15s ease-out
+    a
+      color: $colorWhite
+      font-size: 18px
+      font-weight: lighter
+      text-decoration: none
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      border-bottom: 2px solid #3D444D
+      height: 100%
+      width: 100%
+      max-width: 90%
+      padding-left: 10px
+      letter-spacing: 0
+      img
+        width: 24px
+        height: auto
+        margin-right: 20px
+
+  .menu__item--active
+    background: $colorDaisyBush
+    border-left: 3px solid $colorOrange
+    height: 70px
+    transition: all .15s ease-out
+    margin-top: -1px
+    a
+      border: none
+

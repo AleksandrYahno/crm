@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>CRM</title>
+</head>
+<body>
+
+<div class="side-bar">
+    <span class="logo">CRM</span>
+    <ul class="menu" id="sideBarMenu">
+        <li class="menu__item">
+            <a href="#!">
+                <img src="img/icon_01.png" alt="icon">
+                Dashboard
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#!">
+                <img src="img/icon_02.png" alt="icon">
+                Reports
+            </a>
+        </li>
+        <li class="menu__item menu__item--active">
+            <a href="#!">
+                <img src="img/icon_03.png" alt="icon">
+                Customers
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#!">
+                <img src="img/icon_04.png" alt="icon">
+                Calendar
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="wrapper">
+    <div class="top-bar">
+        <div class="breadcrums">
+            <ul class="breadcrums__list">
+                <li class="breadcrums__list--item">Customers</li>
+                <li class="breadcrums__list--item">Max Jones</li>
+            </ul>
+        </div>
+        <div class="search">
+            <form class="search__form">
+                <p>
+                    <input type="search" name="q" placeholder="SEARCH">
+                    <i class="fas fa-search"></i>
+                </p>
+            </form>
+        </div>
+        <div class="notification">
+            <a href="#!" class="notification__link">
+                <img src="img/icon_05.png" alt="icon" class="notification__link--icon">
+                <span class="notification__link--count">4</span>
+            </a>
+        </div>
+        <div class="avatar">
+            <a href="#!" class="avatar__link">
+                <img class="avatar__link--img" src="img/icon_avatar.png" alt="avatar">
+                <span class="avatar__link--nick">Hello Lauren</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="main-container">
+
+        <div class="customer__img">
+            <img src="img/icon_avatar_cust.png" alt="avatar">
+        </div>
+        <div class="customer__data">
+            <div class="customer__data--name">
+                <h5 class="name">Max Jones <span class="status">gold</span></h5>
+                <p class="prof">Sales & Marketing</p>
+            </div>
+            <div class="customer__data--body">
+                <div class="contact">
+                    <span class="contact__met">phone</span>
+                    <a href="tel:+31140175468" class="contact__lint">(+31) 140 175 468</a>
+                </div>
+                <div class="contact">
+                    <span class="contact__met">adress</span>
+                    <span class="contact__lint">Binnenweg 50, Rotterdam</span>
+                </div>
+                <div class="quoate-btn">
+                    <button class="button">create quote</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="base">
+        <div id="tabs">
+            <div class="tab whiteborder">Tab 1</div>
+            <div class="tab">Tab 2</div>
+            <div class="tab">Tab 3</div>
+            <div class="tabContent">1</div>
+            <div class="tabContent">2</div>
+            <div class="tabContent">3</div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
